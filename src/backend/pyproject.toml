@@ -1,0 +1,39 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Voice2Voice Banking Assistant."
+readme = "README.md"
+requires-python = ">=3.12.8"
+dependencies = [
+    "aiosqlite>=0.21.0",
+    "fastapi[standard]>=0.115.6",
+    "logfire[fastapi]>=3.5.3",
+    "loguru>=0.7.3",
+    "openai>=1.59.8",
+    "psycopg[binary,pool]>=3.2.3",
+    "pydantic-ai-slim[groq]>=0.0.19",
+    "pydantic-settings>=2.7.1",
+    "pytest>=8.3.4",
+    "pytest-asyncio>=0.25.3",
+    "pytest-mock>=3.14.0",
+    "websockets>=14.1",
+]
+
+[build-system]
+requires = [
+  "setuptools>=72.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["ai_services*", "api*", "config*", "convo_history_db*", "customer_transaction_db*", "nlp_processor*"]
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+
+[tool.ruff] 
+line-length=80
+
+[dependency-groups]
+type = [
+    "mypy>=1.14.1",
+]
