@@ -22,7 +22,7 @@ With this application, users can communicate with their transaction records thro
 
 Shows the sample UI. On the side users can optionally see the conversation history.
 
-![frontend](project_info/ex_convo.png)
+![frontend](project_info/ui_convo.png)
 
 ### Observability
 
