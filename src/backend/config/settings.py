@@ -16,11 +16,11 @@ class DatabaseConfig(BaseSettings):
         port: Database port.
     """
 
-    name: str = "mydb" #os.getenv("DB_NAME")
-    user: str = "myuser"#os.getenv("DB_USER")
-    password: str = "mypassword"#os.getenv("DB_PASSWORD")
-    host: str = "localhost"#os.getenv("DB_HOST")
-    port: str = "5432"#os.getenv("DB_PORT")
+    name: str = os.getenv("DB_NAME")
+    user: str = os.getenv("DB_USER")
+    password: str = os.getenv("DB_PASSWORD")
+    host: str = os.getenv("DB_HOST")
+    port: str = os.getenv("DB_PORT")
 
     @property
     def conninfo(self) -> str:
@@ -28,7 +28,7 @@ class DatabaseConfig(BaseSettings):
 
         return (
             f"dbname={self.name} "
-            f"user=myuser "
+            f"user={self.user} "
             f"password={self.password} "
             f"host={self.host} "
             f"port={self.port}"
