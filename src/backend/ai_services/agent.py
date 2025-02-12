@@ -4,7 +4,7 @@ import aiosqlite
 from pydantic_ai import Agent, Tool
 from pydantic_ai.models.groq import GroqModel
 
-from backend.config.settings import Settings
+from config.settings import Settings
 
 @dataclass
 class Dependencies:

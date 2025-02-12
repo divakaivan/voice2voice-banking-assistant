@@ -8,10 +8,10 @@ from psycopg_pool import AsyncConnectionPool
 from pydantic import UUID4
 from pydantic_ai import Agent
 
-from backend.config.settings import get_settings
-from backend.customer_transaction_db.connection import get_customer_sqlite_client
-from backend.nlp_processor.text_to_speech import TextToSpeech
-from backend.ai_services.agent import Dependencies
+from config.settings import get_settings
+from customer_transaction_db.connection import get_customer_sqlite_client
+from nlp_processor.text_to_speech import TextToSpeech
+from ai_services.agent import Dependencies
 
 
 async def get_db_conn(websocket: WebSocket) -> AsyncIterator[AsyncConnection]:

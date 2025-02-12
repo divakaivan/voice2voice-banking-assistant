@@ -9,7 +9,7 @@ from psycopg import AsyncConnection
 from pydantic import UUID4
 from pydantic_ai import Agent
 
-from backend.api.dependencies import (
+from api.dependencies import (
     get_agent,
     get_agent_dependencies,
     get_conversation_id,
@@ -17,12 +17,12 @@ from backend.api.dependencies import (
     get_groq_client,
     get_tts_handler,
 )
-from backend.api.lifespan import app_lifespan as lifespan
-from backend.convo_history_db.actions import get_conversation_history, store_message
-from backend.nlp_processor.speech_to_text import transcribe_audio_data
-from backend.nlp_processor.text_to_speech import TextToSpeech
-from backend.ai_services.agent import Dependencies
-from backend.ai_services.utils import format_messages_for_agent
+from api.lifespan import app_lifespan as lifespan
+from convo_history_db.actions import get_conversation_history, store_message
+from nlp_processor.speech_to_text import transcribe_audio_data
+from nlp_processor.text_to_speech import TextToSpeech
+from ai_services.agent import Dependencies
+from ai_services.utils import format_messages_for_agent
 
 app = FastAPI(title="Voice to Voice Banking Assistant", lifespan=lifespan)
 

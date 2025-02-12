@@ -9,16 +9,16 @@ from psycopg_pool import AsyncConnectionPool
 from pydantic_ai import Agent, Tool
 
 
-from backend.config.settings import get_settings
-from backend.convo_history_db.actions import create_main_table
-from backend.convo_history_db.connection import create_db_connection_pool
-from backend.ai_services.agent import Dependencies, create_groq_agent
-from backend.ai_services.factories import (
+from config.settings import get_settings
+from convo_history_db.actions import create_main_table
+from convo_history_db.connection import create_db_connection_pool
+from ai_services.agent import Dependencies, create_groq_agent
+from ai_services.factories import (
     create_groq_client,
     create_groq_model,
     create_openai_client,
 )
-from backend.ai_services.tools import (
+from ai_services.tools import (
     get_recent_transactions,
     summarize_spending,
     detect_unusual_spending,

@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from loguru import logger
 from pydantic_ai import RunContext
 
-from backend.ai_services.agent import Dependencies
+from ai_services.agent import Dependencies
         
 async def get_recent_transactions(ctx: RunContext[Dependencies], start_date: str = None, end_date: str = "2023-10-14", category: str = None, merchant: str = None, last_n: str = "5") -> List[Dict]:
     """
