@@ -26,20 +26,9 @@ from ai_services.utils import format_messages_for_agent
 
 app = FastAPI(title="Voice to Voice Banking Assistant", lifespan=lifespan)
 
+# logfire setup
 logfire.configure()
 logfire.instrument_fastapi(app)
-
-@app.get("/")
-async def get():
-    """
-    Serves the main HTML page of the application.
-
-    Returns:
-        HTMLResponse containing the content of 'ui_draft' file.
-    """
-    with Path("sample_ui.html").open("r") as file:
-        return HTMLResponse(file.read())
-
 
 @app.get("/health")
 async def health(websocket: WebSocket) -> dict[str, str]:
