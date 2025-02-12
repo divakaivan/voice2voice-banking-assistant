@@ -50,4 +50,4 @@ chrome-user-data
 
 __init__.py
 package-lock.json
-simple_ui.html
+sample_ui.html
