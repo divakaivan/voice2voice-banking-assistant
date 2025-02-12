@@ -21,7 +21,7 @@ const ChatContainer: React.FC<ChatContainerProps> = ({ chatMessages }) => {
 
   return (
     <div className="chat-container">
-      <h2>Chat</h2>
+      <h2>Chat History</h2>
       <div className="chat-box" ref={chatBoxRef}>
         {chatMessages.map((msg, index) => (
           <div

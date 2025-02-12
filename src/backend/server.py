@@ -98,7 +98,7 @@ async def voice_to_voice(
             api_client=groq_client,
             model_name="whisper-large-v3-turbo",
         )
-        await websocket.send_text(f"Human: {transcription}")
+        await websocket.send_text(f"Client: {transcription}")
         # 2: store the user's message
         await store_message(
             conn=db_conn,

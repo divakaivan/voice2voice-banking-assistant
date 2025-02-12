@@ -3,8 +3,8 @@ import Header from './components/Header.tsx';
 import Status from './components/Status.tsx';
 import RecordingButton from './components/RecordingButtons.tsx';
 import ChatContainer from './components/ChatContainer.tsx';
-import './App.css'; // Add the required CSS for layout
-import welcomeLlama from './welcome_llama.png'; // Import your image
+import './App.css';
+import welcomeLlama from './welcome_llama.png';
 
 const App: FC = () => {
   const [statusMessage, setStatusMessage] = useState<string>('Click to start recording');
@@ -186,9 +186,7 @@ const App: FC = () => {
           disabled={buttonDisabled}
           className={isRecording ? 'recording' : ''}
         />
-        {/* Speech Bubble and Image */}
         <div className="relative flex items-center justify-center mt-4">          
-          {/* Llama Image */}
           <img src={welcomeLlama} alt="Llama" className="welcome-llama" />
         </div>
       </div>
