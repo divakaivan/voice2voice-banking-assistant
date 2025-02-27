@@ -1,6 +1,6 @@
 ## Voice2Voice Bank Assistant
 
-![project-flow](project_info/project-flow.png)
+![project-flow](project_info/project-flow.png) 
 
 This is a backend + (sample) frontend Voice-to-Voice Banking Assistant project. 
 With this application, users can communicate with their transaction records through an AI Agent. 
